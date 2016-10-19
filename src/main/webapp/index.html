@@ -1,0 +1,35 @@
+<!doctype html >
+<html ng-app="app">
+<head>
+    <title>example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controller.js"></script>
+    <meta charset="utf-8">
+
+</head>
+
+<body ng-controller="controller as c">
+<form name="calcForm">
+    <label>
+        Esimene arv:
+        <input type="text" name="num1" ng-model="data.num1" ng-required="true">
+    </label>
+    <label>
+        Teine arv:
+        <input type="text" name="num2" ng-model="data.num2" ng-required="true">
+    </label>
+    <select ng-model="data.op">
+        <option value="sum">Liida
+        <option value="sub">Lahuta
+        <option value="prod">Korruta
+        <option value="div">Jaga
+    </select>
+
+    <button type="submit" ng-click="calc()">Täida tehe</button>
+    <p ng-if="result != null">Tehte tulemuseks on {{result}}</p>
+</form>
+
+</div>
+</body>
+</html>
